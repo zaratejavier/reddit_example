@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   resources :subs do 
     resources :topics
 end
+
+resources :topics do
+  resources :comments
+end
   # get '/subs', to: 'sub#index'
 
   # get "/randomthing/:subs_id", to "subs#top_three"
